@@ -14,10 +14,10 @@ jobs:
       - name: Install and Build
         run: |
           npm ci # Usar npm ci para una instalación más rápida y reproducible
-          npm run build
+          npm run deploy
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages
-          folder: build
+          folder: dist

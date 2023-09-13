@@ -4,19 +4,21 @@ on:
     branches:
       - "main"
 jobs:
-  buiid-and-deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v2 # Usar una versión específica
         with:
           persist-credentials: false
       - name: Install and Build
         run: |
-          npm install
+          npm ci # Usar npm ci para una instalación más rápida y reproducible
           npm run build
+      - name: Test # Opcional: Agregar un paso de prueba
+        run: npm test
       - name: Deploy
-        use: JamesIves/github-pages-deploy-action@3.7.1
+        uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: gh-pages

@@ -92,7 +92,7 @@ function App() {
             </div>
             {/* boton del curriculum */}
             <div className="user-info__buttons">
-              <a href='#' className='user-info__button'>
+              <a href='#' className='user-info__btn'>
                 Descargar CV
               </a>
             </div>

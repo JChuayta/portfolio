@@ -8,7 +8,9 @@
   <link rel="stylesheet" href="src/assets/fonts/poppins/poppins.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script>
+     $('#addToCartButton').click(function () { fbq('track', 'Purchase', { currency: "USD", value: 30.00 }); });
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
@@ -28,15 +30,14 @@
     <img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=1397391494458207&ev=PageView&noscript=1" />
   </noscript> -->
-
+ 
 </head>
 
 <body>
   <!-- <div id="root"></div> -->
   <!-- <script type="module" src="/src/main.tsx"></script> -->
   <button id="addToCartButton">Purchase</button>
-  <script
-    type="text/javascript">  $('#addToCartButton').click(function () { fbq('track', 'Purchase', { currency: "USD", value: 30.00 }); });</script>
+  
 </body>
 
 </html>

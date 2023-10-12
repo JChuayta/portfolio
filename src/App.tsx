@@ -1,6 +1,7 @@
 import perfil from '@/assets/img/perfil.png';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './App.css';
+import NavigationMenu from './components/NavigationMenu';
 import './global.css';
 import './styles.css';
 
@@ -25,51 +26,7 @@ function App() {
               <h4 className="user-info__job">Ingeniero de software</h4>
             </div>
             {/* Menu de navegacion */}
-            <nav className='layout__menu'>
-              <ul className="menu__list">
-                <li className="menu__option">
-                  <a href="/" className='menu__link'>
-                    <i className="menu__icon fa-solid fa-house"></i>
-                    <span className="menu__overlay">Home</span>
-                  </a>
-                </li>
-                <li className="menu__option">
-                  <a href="/" className='menu__link'>
-                    <i className="menu__icon fa-solid fa-user"></i>
-                    <span className="menu__overlay">Sobre Mi</span>
-                  </a>
-                </li>
-                <li className="menu__option">
-
-                  <a href="/" className='menu__link'>
-                    <i className="menu__icon fa-solid fa-graduation-cap"></i>
-                    <span className="menu__overlay">Estudios</span>
-                  </a>
-                </li>
-                <li className="menu__option">
-
-                  <a href="/" className='menu__link'>
-                    <i className="menu__icon fa-solid fa-briefcase"></i>
-                    <span className="menu__overlay">Portafolio</span>
-                  </a>
-                </li>
-                <li className="menu__option">
-
-                  <a href="/" className='menu__link'>
-                    <i className="menu__icon fa-solid fa-book"></i>
-                    <span className="menu__overlay">Blog</span>
-                  </a>
-                </li>
-                <li className="menu__option">
-
-                  <a href="/" className='menu__link'>
-                    <i className="menu__icon fa-solid fa-envelope"></i>
-
-                    <span className="menu__overlay">Contacto</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
+            <NavigationMenu />
             {/* links a redes sociales */}
             <div className="user-info__links">
               <ul className="links__social">

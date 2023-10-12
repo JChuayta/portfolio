@@ -12,7 +12,7 @@
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return; n = f.fbq = function () {
         n.callMethod ?
-        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
       if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
       n.queue = []; t = b.createElement(e); t.async = !0;
@@ -22,20 +22,22 @@
       'https://connect.facebook.net/en_US/fbevents.js');
     fbq('init', '1397391494458207');
     fbq('track', 'PageView');
-    fbq('track', 'Purchase', {currency: "USD", value: 30.00});
+    fbq('track', 'Purchase', { currency: "USD", value: 30.00 });
   </script>
   <!-- <noscript>
     <img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=1397391494458207&ev=PageView&noscript=1" />
   </noscript> -->
- 
-  <script type="module" crossorigin src="/portfolio/assets/index-195ea7b6.js"></script>
-  <link rel="stylesheet" href="/portfolio/assets/index-65828904.css">
+
+  <link rel="stylesheet" href="/portfolio/assets/index-4b1a11b4.css">
 </head>
 
 <body>
-  <div id="root"></div>
-  
+  <!-- <div id="root"></div> -->
+  <!-- <script type="module" src="/src/main.tsx"></script> -->
+  <button id="addToCartButton">Purchase</button>
+  <script
+    type="text/javascript">  $('#addToCartButton').click(function () { fbq('track', 'Purchase', { currency: "USD", value: 30.00 }); });</script>
 </body>
 
 </html>
